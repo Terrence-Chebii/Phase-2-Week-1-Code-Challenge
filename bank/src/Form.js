@@ -21,7 +21,7 @@ function TransactionForm({ onAddTransaction }) {
   return (
     <>
       <h2>Added Transactions</h2>
-      <table>
+      <table id='table'>
         <thead>
           <tr>
             <th>Date</th>

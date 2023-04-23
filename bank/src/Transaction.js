@@ -16,6 +16,7 @@ function Transaction() {
 
   return (
     <>
+    <div id='div'>
       <input type='text' placeholder='Search...' onChange={e => setSearch(e.target.value)} />
       <table>
         <thead>
@@ -35,6 +36,7 @@ function Transaction() {
           ))}
         </tbody>
       </table>
+      </div>
     </>
   );
 }

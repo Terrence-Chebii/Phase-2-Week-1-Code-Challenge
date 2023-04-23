@@ -4,19 +4,33 @@
   color: white;
 }
 
-table{
-  position: relative;
-  left: 25%;
-  text-align: center;
-  padding: 1.5%;
+span{
+  color: red;
 }
 
+table{
+  text-align: center;
+  padding: 1.5%;
+  border: 1px solid wheat;
+  margin-left:30% ;
+  margin-right: 30%;
+}
+
+#table{
+  margin-left: 41%;
+}
+
+#table th{
+  margin: 20%;
+}
 
 input{
   border-radius: 20px;
   border: 1px solid black;
   margin-right: 6%;
   padding-right: 3%;
+  margin: 1%;
+  padding: 1%;
 }
 
 button{
