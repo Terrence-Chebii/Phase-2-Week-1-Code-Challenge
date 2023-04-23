@@ -1,36 +1,42 @@
 import React, { useState, useEffect } from 'react';
 
-function TransactionList() {
+function Transaction() {
   const [transactions, setTransactions] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3001/transactions')
+    fetch('http://localhost:5000/transactions')
       .then(response => response.json())
       .then(data => setTransactions(data))
-      .catch(error => console.log(error));
   }, []);
 
+  const filteredTransactions = transactions.filter(transaction =>
+    transaction.description.includes(search)
+  );
+
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Description</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        {transactions.map(transaction => (
-          <tr key={transaction.id}>
-            <td>{transaction.date}</td>
-            <td>{transaction.description}</td>
-            <td>{transaction.amount}</td>
+    <>
+      <input type='text' placeholder='Search...' onChange={e => setSearch(e.target.value)} />
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {filteredTransactions.map(transaction => (
+            <tr key={transaction.id}>
+              <td>{transaction.date}</td>
+              <td>{transaction.description}</td>
+              <td>{transaction.amount}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 }
 
-export default TransactionList;
-
+export default Transaction;

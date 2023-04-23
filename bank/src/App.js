@@ -1,24 +1,24 @@
 import React , {useState} from 'react'
 import './App.css';
-import TransactionList from './Transaction';
+import TransactionForm from './Form';
+import Transaction from './Transaction';
+
 
 
 function App() {
   return (
     <>
-    <form onSubmit={handleSubmit}>
-      <input type='text' placeholder='date' onChange={handleDate} value={date}/>
-      <input type='text' placeholder='description' onChange={handleDescription} value={date}/>
-      <input type='text' placeholder='category' onChange={handlecategory} value={date}/>
-      <input type='text' placeholder='amount' onChange={handleAmount} value={date}/>
-    </form>
-    <TransactionList/>
+    <h1>BANK OF FLATIRON</h1>
+    <Transaction/>
+     <TransactionForm/>
+
     </>
   );
 }
 
-function handleSubmit(event){
-  event.preventDefault()
-}
+
+
+
+
 
 export default App;
