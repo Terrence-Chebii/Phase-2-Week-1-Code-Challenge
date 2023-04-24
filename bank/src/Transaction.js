@@ -17,19 +17,21 @@ function Transaction() {
   return (
     <>
     <div id='div'>
-      <input type='text' placeholder='Search...' onChange={e => setSearch(e.target.value)} />
+      <input type='text' placeholder='Search...' onChange={e => setSearch(e.target.value)} id='search'/>
       <table>
         <thead>
-          <tr>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Amount</th>
+        <tr>
+            <th id='dat'>Date</th>
+            <th id='dat'>Category</th>
+            <th id='des'>Description</th>
+            <th id='amnt'>Amount</th>
           </tr>
         </thead>
         <tbody>
           {filteredTransactions.map(transaction => (
             <tr key={transaction.id}>
               <td>{transaction.date}</td>
+              <td>{transaction.category}</td>
               <td>{transaction.description}</td>
               <td>{transaction.amount}</td>
             </tr>

@@ -11,12 +11,16 @@ span{
 table{
   text-align: center;
   padding: 1.5%;
-  margin-left:30% ;
-  margin-right: 30%;
 }
 
-#table{
-  margin-left: 41%;
+#search{
+  background-color: aliceblue;
+  color: rgb(2, 17, 63);
+}
+
+#search:hover{
+  transform: scale(1.1);
+  transition: .4s;
 }
 
 #table th{
@@ -50,8 +54,38 @@ button{
 }
 
 button:hover{
-  transform: scale(1.2);
+  transform: scale(1.01);
   transition: .4s;
 }
 
+form{
+  background-color: aliceblue;
+  display: flex;
+  flex-direction:column ;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  left: 25%;
+  padding: 1%;
+  margin-bottom: 3%;
+  border-radius: 30px;
 
+}
+
+label{
+  background-color: aliceblue;
+  color: rgb(2, 17, 63);
+}
+
+#des{
+  width: 220%;
+}
+
+#dat{
+  width: 25%;
+}
+
+#amnt{
+  width: 25%;
+  padding: 0;
+}

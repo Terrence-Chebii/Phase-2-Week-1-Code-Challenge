@@ -7,17 +7,19 @@ function TransactionTable({ transactions }) {
       <table id='table'>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Amount</th>
+            <th id='dat'>Date</th>
+            <th id='dat'>Category</th>
+            <th id='des'>Description</th>
+            <th id='amnt'>Amount</th>
           </tr>
         </thead>
         <tbody>
           {transactions.map((transaction, index) => (
             <tr key={index}>
-              <td>{transaction.date}</td>
-              <td>{transaction.description}</td>
-              <td>{transaction.amount}</td>
+              <td id='dat'>{transaction.date}</td>
+              <td id='dat'>{transaction.category}</td>
+              <td id='des'>{transaction.description}</td>
+              <td id='amnt'>{transaction.amount}</td>
             </tr>
           ))}
         </tbody>
