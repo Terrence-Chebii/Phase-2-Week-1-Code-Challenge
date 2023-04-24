@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TransactionTable from './NewTransactionTable';
+import '../src/App.css'
 
 function TransactionForm() {
   const [dateInput, setDateInput] = useState('');

@@ -13,6 +13,13 @@ table{
   padding: 1.5%;
 }
 
+#table{
+  margin-top: -1.69%;
+  margin-bottom: 02%;
+  border: 0;
+  padding-top: 0;
+}
+
 #search{
   background-color: aliceblue;
   color: rgb(2, 17, 63);
@@ -82,7 +89,7 @@ label{
 }
 
 #dat{
-  width: 25%;
+  width: 20%;
 }
 
 #amnt{

@@ -1,4 +1,3 @@
-import React , {useState} from 'react'
 import './App.css';
 import TransactionForm from './TransactionForm';
 import Transaction from './Transaction';
