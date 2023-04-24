@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
 import './App.css';
-import TransactionForm from './Form';
+import TransactionForm from './TransactionForm';
 import Transaction from './Transaction';
 
 
@@ -11,7 +11,6 @@ function App() {
     <h1>BANK OF <span>FLATIRON</span></h1>
     <Transaction/>
      <TransactionForm/>
-
     </>
   );
 }

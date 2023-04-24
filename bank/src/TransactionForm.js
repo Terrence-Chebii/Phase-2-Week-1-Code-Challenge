@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import TransactionTable from './NewTransactionTable';
 
-function TransactionForm({ onAddTransaction }) {
+function TransactionForm() {
   const [dateInput, setDateInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
   const [amountInput, setAmountInput] = useState('');
@@ -20,25 +20,7 @@ function TransactionForm({ onAddTransaction }) {
 
   return (
     <>
-      <h2>Added Transactions</h2>
-      <table id='table'>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          {transactions.map((transaction, index) => (
-            <tr key={index}>
-              <td>{transaction.date}</td>
-              <td>{transaction.description}</td>
-              <td>{transaction.amount}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <TransactionTable transactions={transactions} />
       <form onSubmit={handleSubmit}>
         <label>
           Date:
@@ -69,9 +51,5 @@ function TransactionForm({ onAddTransaction }) {
     </>
   );
 }
-
-TransactionForm.propTypes = {
-  onAddTransaction: PropTypes.func.isRequired,
-};
 
 export default TransactionForm;
