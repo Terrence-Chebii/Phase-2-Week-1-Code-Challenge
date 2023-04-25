@@ -12,9 +12,7 @@ function TransactionForm() {
   const handleSubmit = event => {
     event.preventDefault();
     const newTransaction = { date: dateInput, description: descriptionInput, amount: amountInput , category: categoryInput };
-    // Append the new transaction to the list of transactions
     setTransactions([...transactions, newTransaction]);
-    // Reset the form fields
     setDateInput('');
     setDescriptionInput('');
     setAmountInput('');

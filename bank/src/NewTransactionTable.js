@@ -7,12 +7,14 @@ function TransactionTable({ transactions }) {
     <>
       <table id='table'>
         <tbody>
-          {transactions.map((transaction, index) => (
-            <tr key={index}>
+          {transactions.map((transaction, id) => (
+            <tr key={id}>
               <td id='dat'>{transaction.date}</td>
               <td id='dat'>{transaction.category}</td>
               <td id='des'>{transaction.description}</td>
-              <td id='dat'>{transaction.amount}</td>
+              <td id='amnt'>{transaction.amount}</td>
+              <td id='del' ><button>delete</button></td>
+
             </tr>
           ))}
         </tbody>
@@ -20,6 +22,7 @@ function TransactionTable({ transactions }) {
     </>
   );
 }
+
 
 
 
