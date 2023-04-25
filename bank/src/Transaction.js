@@ -16,7 +16,7 @@ function Transaction() {
   };
 
   const filteredTransactions = transactions.filter(transaction =>
-    transaction.description.search(search) > -1
+    transaction.description.toLowerCase().search(search.toLowerCase()) > -1
   );
 
   const handleDelete = id => {

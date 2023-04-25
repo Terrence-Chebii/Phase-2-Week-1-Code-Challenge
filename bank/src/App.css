@@ -13,6 +13,9 @@ table{
   padding: 1.5%;
   border: 1px solid wheat;
   margin: 2%;
+  margin-bottom: 0;
+  border-bottom: transparent;
+  background-color: rgb(13, 26, 65);
 
 }
 
@@ -21,6 +24,8 @@ table{
   margin-bottom: 02%;
   border: 0;
   padding-top: 0;
+  border: 1px solid wheat;
+  border-top: transparent;
 }
 
 #search{
@@ -109,4 +114,8 @@ label{
   background-color: red;
   color: white;
   border:  transparent ;
+}
+
+::-webkit-scrollbar{
+  display: hidden;
 }
